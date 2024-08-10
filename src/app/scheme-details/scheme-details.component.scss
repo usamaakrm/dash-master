@@ -1,0 +1,56 @@
+.detail{
+    padding: 5rem 7rem;
+    background-color:  white !important;
+}
+
+li{
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+p,li{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+h4{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: rgb(9 49 77);
+    font-weight: 600;
+}
+
+.btn-link, .card-header{
+    background-color: white !important;
+    color: black !important;
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.card{
+    margin: 1rem;
+}
+
+.card-body{
+    padding: 1rem 2rem !important; 
+}
+
+.samm input{
+    margin: 1rem;
+    padding: 10px;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.top{
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.samm button{
+    margin: 1rem;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}

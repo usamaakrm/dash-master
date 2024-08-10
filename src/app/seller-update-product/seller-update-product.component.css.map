@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAM1B;;AATD,AAKI,KALC,CAKD,KAAK,CAAA;EACD,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,KAAK;CACf;;AAGL,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;CAChC;;AAED,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,SAAS;EAClB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "seller-update-product.component.scss"
+    ],
+    "names": [],
+    "file": "seller-update-product.component.css"
+}

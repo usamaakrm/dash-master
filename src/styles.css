@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: myFontFam;
+  src: url(./assets/fonts/EuclidFlexRegular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  font-family: myFontFam;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f3eb;
+}
+
+h2 {
+  color: #936c4d;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+input {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #f5f3eb;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #f5f3eb;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #565656;
+}
+
+a {
+  color: black;
+  font-family: myFontFam;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  margin: 2rem !important;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+/*# sourceMappingURL=styles.css.map */

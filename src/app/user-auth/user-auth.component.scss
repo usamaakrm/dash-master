@@ -1,0 +1,55 @@
+.user-auth{
+    background-image: url(../../assets/home/e8e.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0.203);
+
+    .alerts{
+        color: red;
+    }
+
+    .signup, .login{
+        padding: 2rem 5rem;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: -3rem;
+    }
+}
+
+input{
+    background-color: transparent !important;
+    margin: 2rem 0;
+    width: 600px;
+    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.sam input{
+    width: 400px !important;
+    margin: 1rem;
+}
+
+input:focus{
+    outline: none;
+    background-color: transparent;
+
+}
+
+button:disabled{
+    cursor: not-allowed;
+}
+
+.btn-design{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}

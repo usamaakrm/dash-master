@@ -1,0 +1,57 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.gender{
+   width: 90%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+.gender img{
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.gender div{
+    // background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    border: 2px solid grey;
+    margin: 2rem;
+}
+
+.gender div:hover{
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.116);
+    cursor: pointer;
+}
+
+.gender-container{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    // background-color: white;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.scheme{
+    margin: 4rem;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.scheme p{
+    margin: 1rem 0;
+    color: grey;
+}

@@ -1,0 +1,50 @@
+nav{
+    background-color: white;
+}
+
+li{
+    list-style: none;
+    margin: auto 20px;
+}
+
+.nav{
+    width:100%;
+    padding: 1rem 3rem;
+    align-items: center;
+    border-bottom: 2px solid rgba(182, 180, 180, 0.356);
+    margin-top: -5px;
+}
+
+.logo{
+   font-size: 2rem;
+}
+
+input{
+    border: none;
+    outline: none;
+    height: 30px;
+}
+
+.search-border{
+    border: 2px solid rgba(116, 116, 116, 0.356);
+    border-radius: 5px;
+    padding: 0.5rem 2rem .5rem 2rem;
+}
+
+.search-border:hover{
+    border: 2.5px solid rgba(116, 116, 116, 0.822);
+    transition: .3s;
+}
+
+.search-btn{
+    background-color: transparent;
+    border: none;
+}
+
+ul{
+    margin-top: 10px;
+}
+
+h3{
+    margin-top: 10px;
+}

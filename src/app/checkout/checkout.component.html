@@ -1,0 +1,19 @@
+<div class="checkout">
+    <h1>checkout</h1>
+    <h4>{{ ordermsg }}</h4>
+    <div class="flex">
+       <div class="item">
+        <h3>Add shipping Address</h3>
+        <form #orderData="ngForm" (ngSubmit)="orderDataForm(orderData.value)">
+              <input type="text" name="email" ngModel>
+              <input type="text" name="address" ngModel>
+              <input type="text" name="contact" ngModel>
+              <button>Order Now</button>
+        </form>
+       </div>
+       <div>
+        <h3>total amount: {{totalPrice}}</h3>
+        <h4>Payment method: POD</h4>
+       </div>
+    </div>
+</div>

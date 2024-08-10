@@ -1,0 +1,31 @@
+<p class="green">{{ productMessage }}</p>
+<div class="flex update p-5">
+    <div>
+        <img src="../../assets/bg/Store_image.jpg" alt="" width="50%">
+    </div>
+    <div>
+        <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="form">
+            <h1>Update the Product</h1>
+            name
+            <input type="text" name="ProductName" id="" placeholder="enter product name" 
+            ngModel="{{productData?.ProductName}}">
+            price
+            <input type="numer" name="price" id="" placeholder="enter product price" 
+            ngModel="{{productData?.price}}">
+            color
+            <input type="text" name="color" id="" placeholder="enter color" 
+            ngModel="{{productData?.color}}">
+            category
+            <input type="text" name="category" id="" placeholder="enter category" 
+            ngModel="{{productData?.category}}">
+            description
+            <input type="text" name="description" id="" placeholder="enter description" 
+            ngModel="{{productData?.description}}">
+            img
+            <input type="text" name="image" id="" placeholder="enter image" 
+            ngModel="{{productData?.image}}">
+            <button>Submit</button>
+        </form>
+    </div>
+    
+</div>

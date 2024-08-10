@@ -1,0 +1,103 @@
+<div *ngFor="let item of schemeList" class="detail">
+  <h5>{{item.industry}}</h5>
+  <h2>{{item.head}}</h2>
+  <h4>Details</h4>
+  <p>{{item.details}}</p>
+  <h4>Benefits</h4>
+     <ul>
+        <li>{{item.benefit1}}</li>
+        <li>{{item.benefit2}}</li>
+        <li>{{item.benefit3}}</li>
+     </ul>
+  <h4>Eligility</h4>
+  <ul>
+    <li>{{item.eligible1}}</li>
+    <li>{{item.eligible2}}</li>
+    <li>{{item.eligible3}}</li>
+  </ul>
+  <h4>Application Process</h4>
+  <ul>
+    <li><b>Step 1</b>: The interested applicant should take print of the prescribed format of the application form.</li>
+    <li><b>Step 2</b>: In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).</li>
+    <li><b>Step 3</b>: Submit the duly filled and signed application form along with the documents to the concerned authority</li>
+  </ul>
+  <h4>Documents Required</h4>
+ <ul>
+    <li>Identity proof i.e. Aadhaar Card</li>
+    <li>Passport size photograph</li>
+    <li>Educational documents/certificates i.e. Mark sheets</li>
+    <li>Caste certificate</li>
+    <li>Income certificate</li>
+    <li>Residence-cum-nativity certificate issued by the competent authority</li>
+    <li>Bank Account details</li>
+ </ul> 
+  <h4>Frequently Asked Questions</h4>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            How are applications prioritized?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            Applications are considered on a first-come, first-serve basis, subject to fund availability.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            How is subsidy disbursed to the applicants?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+            Subsidies are released to the applicant’s bank account after post-installation inspection approval through PFMS. </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Can already existing units upgrade using this scheme?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+            No, the scheme is exclusively for the establishment of new R&G units, not for upgrading existing facilities.  </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            What actions can lead to the rejection of an application?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body">
+            Offers, rewards, gifts, or any coercion to influence the sanction process may lead to rejection.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 class="top">Registration Form</h3>
+  <form #messsage="ngForm" class="samm" (ngSubmit)="message(messsage.value)" ngModel>
+    <input type="text" placeholder="Enter your Name" name="name" ngModel>
+    <input type="number" placeholder="Enter your Age" name="age" ngModel>
+    <input type="email" placeholder="Enter your Email" name="email" ngModel>
+    <input type="number" placeholder="Enter your Phone Number" name="phone" ngModel>
+    <input type="text" placeholder="Enter your Address" name="address" ngModel>
+    <input type="text" placeholder="Tell us about your request" name="message" ngModel> <br>
+    <button>Submit</button>
+  </form>
+</div>

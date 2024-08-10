@@ -1,0 +1,22 @@
+<section *ngIf="productData" class="flex productData">
+
+    <div class="details-l">
+       <img src="{{ productData.image }}" alt="" srcset="" width="600">
+    </div>
+    <div class="details-r">
+        <h1>{{ productData.ProductName }}</h1>
+        <div>
+        <h1 [style.backgroundColor]="productData.color" class="color">{{ productData.color }}</h1>
+    
+        </div>
+        <h1>{{ productData.price }}</h1>
+        <button (click)="addToCart()">Buy Now</button>
+        <button *ngIf="!removeCart" (click)="addToCart()">Add to Carts</button>
+        <button *ngIf="removeCart" (click)="removeToCart(productData.id)">Remove to Cart</button>
+        <div >
+            <button (click)="handleQuantity('min')">-</button>
+            <input type="text" value="{{productQuantity}}">
+            <button (click)="handleQuantity('plus')">+</button>
+        </div>
+    </div>
+</section>

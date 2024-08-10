@@ -1,0 +1,18 @@
+<p class="green">{{ addProductMessage }}</p>
+<!-- <a routerLink="/admin" class="go-back"><h3>Go  Back </h3></a> -->
+<section class="flex">
+    <form #addSceheme="ngForm" (ngSubmit)="submit(addSceheme.value)" class="form flex">
+        <input type="text" name="industry" id="" placeholder="Enter Industry Name" ngModel>
+        <input type="text" name="head" id="" placeholder="Enter Scheme Name" ngModel><br>
+        <input type="text" name="details" id="" placeholder="Enter Scheme Details" ngModel>
+        <input type="text" name="benefit1" id="" placeholder="Enter benefit1" ngModel><br>
+        <input type="text" name="benefit2" id="" placeholder="Enter benefit2" ngModel>
+        <input type="text" name="benefit3" id="" placeholder="Enter benefit3" ngModel><br>
+        <input type="text" name="eligible1" id="" placeholder="Enter eligible1" ngModel>
+        <input type="text" name="eligible2" id="" placeholder="Enter eligible2" ngModel><br>
+        <input type="text" name="eligible3" id="" placeholder="Enter eligible3" ngModel>
+        <input type="text" name="category" id="" placeholder="Enter category" ngModel>
+        <input type="text" name="gender" id="" placeholder="Enter gender" ngModel>
+        <button>Update the Product</button>
+    </form>
+</section>

@@ -1,0 +1,27 @@
+<div class="d-flex main">
+    <div class="gender-container">
+        <h2>Help us find the best schemes for you</h2>
+        <div class="flex gender">
+            <div (click)="male('male')">
+                <img src="../../assets/home/male.svg" alt="" width="60">
+                <h4>Male</h4>
+            </div>
+            <div (click)="women('women')">
+                <img src="../../assets/home/female.svg" alt="" width="35">
+                <h4>Female</h4>
+            </div>
+            <div (click)="trans('trans')">
+                <img src="../../assets/home/transgender.svg" alt="" width="60">
+                <h4>Transgender</h4>
+            </div>
+        </div>
+        <div *ngFor="let em of schemeList" class="scheme">
+            <a routerLink="/details/{{em.id}}">
+                <h3>{{ em.head }}</h3>
+                <p>{{ em.details }}</p>
+                <h5>{{ em.industry }}</h5>
+            </a>
+        </div>
+    </div>
+    
+</div>

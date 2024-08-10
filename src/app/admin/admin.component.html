@@ -1,0 +1,61 @@
+
+<div class="main ">
+    <div>
+        <a routerLink="/add-scheme" class="btn-design"> Add Scheme</a>
+    </div>
+    <h3>Formers Details</h3>
+    <div class="color">
+        <div class="sch-user">
+            <ul class="former-list bold">
+                <li>Former Id</li>
+                <li>Former Name</li>
+                <li>Former Age</li>
+                <li>Former Email</li>
+                <li>Former Address</li>
+                <li>Action</li>
+            </ul>
+        </div>
+        <hr>
+        <div *ngFor="let item of userList" class="sch-user">
+            <ul class="former-list">
+                <li>{{ item.id }}</li>
+                <li>{{ item.name }}</li>
+                <li>{{ item.age }}</li>
+                <li>{{ item.email }}</li>
+                <li>{{ item.address }}</li>
+                <li><button (click)="deleteUser( item.id )">Delete</button></li>
+            </ul>
+        </div>
+    </div>
+    <h3>All Schemes</h3>
+    <div class="sch-main">
+        <div *ngFor="let em of schemeList" class="sch-design">
+            <h4>{{ em.head }}</h4>
+            <p>{{ em.details }}</p>
+        </div>
+    </div>
+
+    <h3>Formers Request</h3>
+    <div class="color">
+        <div class="sch-user">
+            <ul class="former-list bold">
+                <li>Former Id</li>
+                <li>Former Name</li>
+                <li>Former Age</li>
+                <li>Former Address</li>
+                <li class="forms">Former Request</li>
+            </ul>
+        </div>
+        <hr>
+        <div *ngFor="let item of messageList" class="sch-user">
+            <ul class="former-list">
+                <li>{{ item.id }}</li>
+                <li>{{ item.name }}</li>
+                <li>{{ item.age }}</li>
+                <li>{{ item.address }}</li>
+                <li class="forms">{{ item.message }}</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>

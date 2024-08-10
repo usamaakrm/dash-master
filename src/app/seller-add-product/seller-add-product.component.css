@@ -1,0 +1,36 @@
+.green {
+  color: green;
+  font-size: 20px;
+}
+
+.flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  width: 100%;
+}
+
+input {
+  margin: 1rem auto;
+  width: 500px;
+  padding: 10px 30px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=seller-add-product.component.css.map */

@@ -1,0 +1,55 @@
+.user-auth {
+  background-image: url(../../assets/home/bg1.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(250, 235, 215, 0.203);
+}
+
+.user-auth .alerts {
+  color: red;
+}
+
+.user-auth .signup, .user-auth .login {
+  padding: 2rem 5rem;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: -3rem;
+}
+
+input {
+  background-color: transparent !important;
+  margin: 2rem 0;
+  width: 600px;
+  border: none;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.btn-design {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=user-auth.component.css.map */

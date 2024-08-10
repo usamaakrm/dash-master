@@ -1,0 +1,37 @@
+<div>
+    <h1>my orders</h1>
+    <div class="flex">
+        <div class="item">
+            <span>Order</span>
+        </div>
+        <div class="item">
+            <span>Order Id</span>
+        </div>
+        <div class="item">
+            <span>price</span>
+        </div>
+        <div class="item">
+            <span>Status</span>
+        </div>
+        <div class="item">
+            <span>Action</span>
+        </div>
+    </div>
+    <div class="flex" *ngFor="let item of orderData">
+        <div class="item">
+            <span>Order</span>
+        </div>
+        <div class="item">
+            <span>37383</span>
+        </div>
+        <div class="item">
+            <span>{{ item.address }}</span>
+        </div>
+        <div class="item">
+            <span>progress</span>
+        </div>
+        <div class="item">
+            <span (click)="cancelOrder(item.id)">cancel</span>
+        </div>
+    </div>
+</div>

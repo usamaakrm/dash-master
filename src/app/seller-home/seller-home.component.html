@@ -1,0 +1,164 @@
+<section id="orders">
+    <div class="insight flex">
+        <div class="insight-data flex">
+            <div class="data-item">
+                <img src="../../assets/icons/shopping-bag.png" alt="" width="50">
+            </div>
+            <div class="data-item">
+                <h4>{{orderCount}}</h4>
+                New Orders
+            </div>
+        </div>
+        <div class="insight-data flex">
+            <div class="data-item">
+                <img src="../../assets/icons/box.png" alt="" width="50">
+            </div>
+            <div class="data-item">
+                <h4>{{productItems}}</h4>
+                Product
+            </div>
+        </div>
+        <div class="insight-data flex">
+            <div class="data-item">
+                <img src="../../assets/icons/team.png" alt="" width="50">
+            </div>
+            <div class="data-item">
+                <h4>{{Visitors}}</h4>
+                Active Users
+            </div>
+        </div>
+        <div class="insight-data flex">
+            <div class="data-item">
+                <img src="../../assets/icons/revenue.png" alt="" width="50">
+            </div>
+            <div class="data-item">
+                <h4>{{Visitors}}</h4>
+                Active Users
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex">
+        <div class="chart">
+            <div class="wrapper">
+                <h2>Yearly Stats</h2>
+                <br>
+                <input type="radio" name="species" id="gromflomites">
+                <label for="gromflomites">Total Revenue</label>
+                
+                <input type="radio" name="species" id="jerrys" checked>
+                <label for="jerrys">Total Sales</label>
+                
+                <input type="radio" name="species" id="squanchies">
+                <label for="squanchies">Total Income</label>
+                
+                <div class="chart">
+                    
+                    <ul class="values">
+                        <span></span>
+                        <li class="value"></li>
+                        <li class="value"></li>
+                        <li class="value"></li>
+                        <li class="value"></li>
+                        <li class="value"></li>
+                    </ul>
+                    
+                    <ul class="axis y">
+                        <span></span>
+                        <li data-mark="20M"></li>
+                        <li data-mark="40M"></li>
+                        <li data-mark="60M"></li>
+                        <li data-mark="80M"></li>
+                        <li data-mark="100M"></li>
+                    </ul>
+                    
+                    <ul class="axis x">
+                        <span></span>
+                        <li data-mark="2018"></li>
+                        <li data-mark="2019"></li>
+                        <li data-mark="2020"></li>
+                        <li data-mark="2022"></li>
+                        <li data-mark="2023"></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="insight-item">
+            <h3>Recent Customers</h3>
+            <div class="user-details">
+                <div *ngFor="let elm of userListData" class="flex userList">
+                    <h4>{{elm.name}}</h4>
+                    <button class="btn" (click)="deleteUser(elm.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+    <h3>Recent Orders!</h3>
+    <div class="orders">
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Date Orders</th>
+                    <th>Status</th>
+                    <th>Address</th>
+                    <th>Payment</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of orderItems">
+
+                    <td>{{ item.userId }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.data }}</td>
+                    <td>{{ item.address }}</td>
+                    <td>{{item.totalPrice}}</td>
+                    <td>
+                        <fa-icon (click)="cancelOrder(item.id)" [icon]="icon"></fa-icon>
+                        <a routerLink="/seller-update-product/{{item.id}}">
+                            <fa-icon [icon]="iconEdit"></fa-icon>
+                        </a>
+                </tr>
+            </tbody>
+        </table>
+    </div></div>
+    <div class="product">
+        <h1>{{ productMessage }}</h1>
+        <h3>Your Products</h3>
+        <div class="orders">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr *ngFor="let item of productList">
+                        <td>{{ item.ProductName }}</td>
+                        <td>{{ item.price }}</td>
+                        <td><img src="{{ item.image }}" alt="" width="100"></td>
+                        <td>{{ item.category }}</td>
+                        <td>
+                            <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+                            <a routerLink="/seller-update-product/{{item.id}}">
+                                <fa-icon [icon]="iconEdit"></fa-icon>
+                            </a>
+                    </tr>
+                </tbody>
+            </table>
+        </div></div>
+</section>

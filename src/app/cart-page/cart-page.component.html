@@ -1,0 +1,47 @@
+<section>
+    <h1>cart page</h1>
+    <div class="flex">
+        <div class="details">
+            <ul *ngFor="let cart of cartData" >
+                <li>
+                    <img src="{{cart.image}}" alt="hell" width="200">
+                </li>
+                <li>
+                    <span>product name {{cart.ProductName}}</span>
+                </li>
+                <li>
+                    <span>price: {{cart.ProductName}}</span>
+                </li>
+                <li>
+                    <span>product Qty: {{cart.quantity}}</span>
+                </li>
+                <li>
+                    <button (click)="removeToCart(cart.id)">remove to cart</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="sum">
+        <h1>summary</h1>
+        <ul>
+            <li>
+                <span>amount</span><span>{{ priceSum.price }}</span>
+            </li>
+            <li>
+                <span>tax</span><span>{{ priceSum.tax }}</span>
+            </li>
+            <li>
+                <span>delivery</span><span>{{ priceSum.delivery }}</span>
+            </li>
+            <li>
+                <span>disc</span><span>{{ priceSum.discount }}</span>
+            </li>
+            <li>
+                <h4>total</h4><span>{{ priceSum.total }}</span>
+            </li>
+            <button (click)="checkout()">Checkout</button>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+.green{
+    color: green;
+    font-size: 20px;
+}
+
+.flex{
+    flex-direction: row;
+    justify-content: left !important;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.go-back{
+    padding-left: 2rem !important;
+}
+
+.form{
+    width: 100%;
+}
+
+input{
+    margin: 2rem;
+    width: 600px;
+    padding: 10px 30px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}

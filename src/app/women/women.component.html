@@ -1,0 +1,10 @@
+<img src="../../assets/home/Women.webp" width="100%" alt="">
+<div>
+    <div *ngFor="let em of schemeList" class="scheme">
+        <a routerLink="/details/{{em.id}}">
+            <h3>{{ em.head }}</h3>
+            <p>{{ em.details }}</p>
+            <h5>{{ em.industry }}</h5>
+        </a>
+    </div>
+</div>

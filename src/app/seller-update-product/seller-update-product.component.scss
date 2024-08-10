@@ -1,0 +1,22 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input{
+        margin: 1rem 0;
+        width: 400px;
+    }
+}
+
+.update{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: black;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+}

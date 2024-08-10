@@ -1,0 +1,408 @@
+fa-icon {
+  color: black;
+  margin: 2rem 1rem;
+}
+
+.product-list {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.507);
+}
+
+section {
+  padding: 3rem !important;
+  margin: 0 !important;
+  background-color: #9a9a9a25;
+}
+
+section h1 {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin: 1rem;
+  font-weight: 800;
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  padding: 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.486);
+}
+
+.insight-item, .product, .order, .insight-data {
+  background-color: rgba(255, 255, 255, 0.76);
+  -webkit-backdrop-filter: blur(40);
+          backdrop-filter: blur(40);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 3rem 0;
+  border: 2px solid rgba(128, 128, 128, 0.924);
+}
+
+.insight-data {
+  margin: 1rem;
+  width: 200px;
+}
+
+.orders,
+.user-details {
+  border: 1px solid white;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.user-details {
+  width: 400px;
+}
+
+.user-details div {
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.user-details button {
+  font-size: 14px;
+  padding: 4px;
+}
+
+.user-details h4 {
+  font-size: 1rem;
+}
+
+:root {
+  font-size: calc(9px + 1vmin);
+  --primary: #7733ff;
+  --darkGrey: #404444;
+  --softGrey: #909999;
+  --softTint: rgba(0, 0, 40, 0.2);
+  --bounce: 0.4s cubic-bezier(0.3, -0.1, 0.1, 1.4);
+  --ease: 0.3s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: var(--softGrey);
+  padding: 1rem;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0.001;
+}
+
+h2 {
+  color: var(--darkGrey);
+}
+
+.wrapper {
+  width: 90vw;
+  max-width: 50em;
+  padding: 2em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 1em 2em var(--softTint);
+          box-shadow: 0 1em 2em var(--softTint);
+}
+
+.wrapper label {
+  margin-right: 1em;
+  padding-bottom: 0.2em;
+  line-height: 2;
+  border-radius: 0 0 0.2em 0.2em;
+  border-bottom: 0.2em solid transparent;
+  cursor: pointer;
+}
+
+.wrapper label:hover {
+  color: var(--primary);
+}
+
+.chart {
+  position: relative;
+  margin-top: 2em;
+  padding: 1em 0 3em 0;
+}
+
+.chart .values {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: -1em;
+  min-height: 40vh;
+}
+
+.chart .values::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.28;
+  border-radius: 0 0 0.5em 0.5em;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(30%, var(--primary)));
+  background: linear-gradient(to right, transparent, var(--primary) 30%);
+  -webkit-transition: var(--bounce);
+  transition: var(--bounce);
+}
+
+.chart .values .value {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 20%;
+  background: var(--primary);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: var(--bounce);
+  transition: var(--bounce);
+}
+
+.chart .values .value::after {
+  content: "this is a tip";
+  position: absolute;
+  left: -100%;
+  bottom: 120%;
+  min-width: 12ch;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5em 1em var(--softTint);
+          box-shadow: 0 0.5em 1em var(--softTint);
+  pointer-events: none;
+  -webkit-transform: translateY(1em);
+          transform: translateY(1em);
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: var(--ease);
+  transition: var(--ease);
+}
+
+.chart .values .value:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.chart .axis {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.chart .axis li::before {
+  content: attr(data-mark);
+}
+
+.chart .axis.x {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: translateX(1em);
+          transform: translateX(1em);
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(1) {
+  top: 99%;
+  left: 20%;
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(1)::after {
+  content: "1 billion";
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(2) {
+  top: 97%;
+  left: 40%;
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(2)::after {
+  content: "3 billion";
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(3) {
+  top: 89%;
+  left: 60%;
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(3)::after {
+  content: "11 billion";
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(4) {
+  top: 61%;
+  left: 80%;
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(4)::after {
+  content: "39 billion";
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(5) {
+  top: 10%;
+  left: 100%;
+}
+
+#gromflomites:checked ~ .chart .value:nth-of-type(5)::after {
+  content: "90 billion";
+}
+
+#gromflomites:checked ~ .chart .values::before {
+  --clip-path: polygon(0 100%, 20% 99% , 40% 97% , 60% 89% , 80% 61% , 100% 10% , 100% 100%);
+  clip-path: var(--clip-path);
+  -webkit-clip-path: var(--clip-path);
+}
+
+#gromflomites:checked ~ label[for="gromflomites"] {
+  color: var(--primary);
+  border-color: currentcolor;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(1) {
+  top: 28%;
+  left: 20%;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(1)::after {
+  content: "72 billion";
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(2) {
+  top: 88%;
+  left: 40%;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(2)::after {
+  content: "12 billion";
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(3) {
+  top: 51%;
+  left: 60%;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(3)::after {
+  content: "49 billion";
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(4) {
+  top: 65%;
+  left: 80%;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(4)::after {
+  content: "35 billion";
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(5) {
+  top: 85%;
+  left: 100%;
+}
+
+#jerrys:checked ~ .chart .value:nth-of-type(5)::after {
+  content: "15 billion";
+}
+
+#jerrys:checked ~ .chart .values::before {
+  --clip-path: polygon(0 100%, 20% 28% , 40% 88% , 60% 51% , 80% 65% , 100% 85% , 100% 100%);
+  clip-path: var(--clip-path);
+  -webkit-clip-path: var(--clip-path);
+}
+
+#jerrys:checked ~ label[for="jerrys"] {
+  color: var(--primary);
+  border-color: currentcolor;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(1) {
+  top: 50%;
+  left: 20%;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(1)::after {
+  content: "50 billion";
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(2) {
+  top: 38%;
+  left: 40%;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(2)::after {
+  content: "62 billion";
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(3) {
+  top: 75%;
+  left: 60%;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(3)::after {
+  content: "25 billion";
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(4) {
+  top: 89%;
+  left: 80%;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(4)::after {
+  content: "11 billion";
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(5) {
+  top: 85%;
+  left: 100%;
+}
+
+#squanchies:checked ~ .chart .value:nth-of-type(5)::after {
+  content: "15 billion";
+}
+
+#squanchies:checked ~ .chart .values::before {
+  --clip-path: polygon(0 100%, 20% 50% , 40% 38% , 60% 75% , 80% 89% , 100% 85% , 100% 100%);
+  clip-path: var(--clip-path);
+  -webkit-clip-path: var(--clip-path);
+}
+
+#squanchies:checked ~ label[for="squanchies"] {
+  color: var(--primary);
+  border-color: currentcolor;
+}
+/*# sourceMappingURL=seller-home.component.css.map */

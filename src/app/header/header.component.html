@@ -1,0 +1,23 @@
+<nav class="nav flex justify-space-between">
+    
+    <!-- <div *ngIf="menuType!=='seller'" class="search-border">
+       
+    </div> -->
+    <a routerLink="">
+       <img src="../../assets/home/digital-india-black.svg" alt="" width="60px">
+    </a>
+    <div [ngSwitch]="menuType">
+        <ul class="flex" *ngSwitchCase="'default'">
+            
+        </ul>
+        <ul class="flex" *ngSwitchCase="'user'">
+            <li  class="mx-3"><a routerLink="seller-auth">Admin</a></li>
+            <li class="mx-3" (click)="userLogout()"><a >logout</a></li>
+            <li class="mx-3"><h4>Hi, {{ userName | titlecase }}</h4></li>
+        </ul>
+        <ul class="flex" *ngSwitchCase="'seller'">
+            <li  class="mx-3"><a routerLink="add-scheme">Add Product</a></li>
+            <li class="mx-3" (click)="logout()"><a >logout</a></li>
+        </ul>
+    </div>
+</nav>
